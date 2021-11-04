@@ -19,12 +19,12 @@
     <div class="container-fluid" style="margin-top:20px">
       <div class="row">
         <div class="col-4">
-          <button type="button" class="btn" ng-model="button" ng-click="togglePause()" ng-disabled="!ready || currentState.length === 0" ng-class="{'btn-success' : currentState.paused, 'btn-danger': !currentState.paused}">
-            <span class="fas fa-pause" ng-class="{'fa-play': currentState.paused, 'fa-pause' : !currentState.paused}"></span>
-          </button>
-          <button type="button" class="btn btn-primary" ng-model="button" ng-click="nextTrack()" ng-disabled="!ready || currentState.length === 0">
-            <span class="fas fa-step-forward"></span>
-          </button>
+          <!-- <button type="button" class="btn" ng-model="button" ng-click="togglePause()" ng-disabled="!ready || currentState.length === 0" ng-class="{'btn-success' : currentState.paused, 'btn-danger': !currentState.paused}"> -->
+            <!-- <span class="fas fa-pause" ng-class="{'fa-play': currentState.paused, 'fa-pause' : !currentState.paused}"></span> -->
+          <!-- </button> -->
+          <!-- <button type="button" class="btn btn-primary" ng-model="button" ng-click="nextTrack()" ng-disabled="!ready || currentState.length === 0"> -->
+            <!-- <span class="fas fa-step-forward"></span> -->
+          <!-- </button> -->
           <p><small>
             <span class="fas fa-music" ng-if="currentState.length > 0"></span>
             <span class="fas fa-exclamation-triangle" ng-if="currentState.length === 0"></span>
