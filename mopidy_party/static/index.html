@@ -16,6 +16,40 @@
     <script type="text/javascript" src="controller.js"></script>
   </head>
   <body ng-controller="MainController">
+    <div class="container">
+      <div class="player">
+        <div class="help offline-only">
+          <h1>Server is offline</h1>
+
+
+
+
+        </div>
+
+        <div class="cover online-only">
+          <img id="cover" />
+        </div>
+
+        <p class="current online-only">
+          <span id="current-track">Unknown</span><br />
+          <span id="current-artist">Unknown</span> -
+          <span id="current-album">Unknown</span><br />
+        </p>
+
+
+
+        <p class="state online-only">
+          <span id="playback-state"></span><br />
+          <code id="current-uri"></code>
+        </p>
+
+        <div class="help online-only">
+
+        </div>
+      </div>
+
+      <pre class="event-log" id="event-log"></pre>
+    </div>
     <div class="container-fluid" style="margin-top:20px">
       <div class="row">
         <div class="col-4">
@@ -84,5 +118,34 @@
         </button>
       </div>
     </div>
+    <div data-role="content" class="pane ui-content" id="currentpane" role="main" style="display: block;">
+<div class="ui-grid-a">
+<div class="ui-block-a ui-block-a-min">
+<h4>Play Queue</h4>
+</div>
+<div align="right" class="ui-block-b ui-block-b-min">
+<div data-role="controlgroup" data-type="horizontal" class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" aria-disabled="false" data-disabled="false" data-shadow="false" data-corners="true" data-exclude-invisible="true" data-mini="false" data-init-selector=":jqmData(role='controlgroup')"><div class="ui-controlgroup-controls">
+<div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" data-disabled="false" class="ui-btn ui-shadow ui-btn-corner-all ui-first-child ui-btn-up-c" aria-disabled="false"><span class="ui-btn-inner"><span class="ui-btn-text">
+<i class="fa fa-plus"></i>
+</span></span><button class="btn ui-btn-hidden" type="button" title="Add a track to the queue" onclick="return controls.showAddTrackPopup();" data-disabled="false">
+<i class="fa fa-plus"></i>
+</button></div>
+<div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" data-disabled="false" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c" aria-disabled="false"><span class="ui-btn-inner"><span class="ui-btn-text">
+<i class="fa fa-bookmark-o"></i>
+</span></span><button class="btn ui-btn-hidden" type="button" title="Save queue to playlist" onclick="return controls.showSavePopup();" data-disabled="false">
+<i class="fa fa-bookmark-o"></i>
+</button></div>
+<div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" data-disabled="false" class="ui-btn ui-shadow ui-btn-corner-all ui-last-child ui-btn-up-c" aria-disabled="false"><span class="ui-btn-inner"><span class="ui-btn-text">
+<i class="fa fa-times"></i>
+</span></span><button class="btn ui-btn-hidden" type="button" title="Clear queue" onclick="return controls.clearQueue();" data-disabled="false">
+<i class="fa fa-times"></i>
+</button></div>
+</div></div>
+</div>
+</div>
+<div class="ui-grid">
+<ul class="table" id="currenttable"></ul>
+</div>
+</div>
   </body>
 </html>
