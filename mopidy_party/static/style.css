@@ -6,3 +6,4 @@
 body {
  background-image: url("bg.jpg");
 }
+iframe { pointer-events: none; }
