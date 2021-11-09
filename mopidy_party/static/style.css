@@ -1,3 +1,4 @@
+
 .add-button {
   float: left;
   margin: 10px 10px 10px 0px;
@@ -7,3 +8,17 @@ body {
  background-image: url("bg.gif");
 }
 iframe { pointer-events: none; }
+h1 {
+	display: inline;
+	position: relative;
+	font: 100px Helvetica, Sans-Serif;
+	letter-spacing: -5px;
+	color: #9370db;
+}
+
+h1:after {
+	content: "Now Playing";
+	position: absolute; left: 0px; top: 5px;
+	color: white;
+
+}

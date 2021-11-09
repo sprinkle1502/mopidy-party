@@ -16,8 +16,16 @@
     <script type="text/javascript" src="controller.js"></script>
   </head>
   <body ng-controller="MainController">
-    <div class="container-fluid" style="margin-top:20px">
-    
+<center>
+<div class="box">
+    <h1 style="background-color: #ff1493;">
+Now Playing
+</h1>
+  </div>
+  </center>
+      <div class="box">
+    <div class="container-fluid" >
+
 
           <!-- <button type="button" class="btn" ng-model="button" ng-click="togglePause()" ng-disabled="!ready || currentState.length === 0" ng-class="{'btn-success' : currentState.paused, 'btn-danger': !currentState.paused}"> -->
             <!-- <span class="fas fa-pause" ng-class="{'fa-play': currentState.paused, 'fa-pause' : !currentState.paused}"></span> -->
@@ -25,7 +33,9 @@
           <!-- <button type="button" class="btn btn-primary" ng-model="button" ng-click="nextTrack()" ng-disabled="!ready || currentState.length === 0"> -->
             <!-- <span class="fas fa-step-forward"></span> -->
           <!-- </button> -->
+
           <center>
+
         <div class="col-8">
         <div class="card card-body bg-light">
 
@@ -39,11 +49,14 @@
               </small>
               <small>{{ printDuration(currentState.track) }}</small>
             </span>
-
+</div>
           </div>
 
         </div>
             </center>
+</br>
+</div>
+</br></br>
 
       <div class="row">
         <div class="col-12">
